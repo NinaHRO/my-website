@@ -1,0 +1,72 @@
+
+<!doctype html>
+<!-- 
+  San Joaquin Valley Town Hall - Speaker Page: Nina Ross
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nina Ross - San Joaquin Valley Town Hall</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="..\san_joaquin_site\images\favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Main container with document role for accessibility -->
+  <div class="container" role="document">
+    <!-- Header section with logo and navigation -->
+    <header role="banner">
+      <img src="..\san_joaquin_site\images\logo.gif" alt="San Joaquin Valley Town Hall logo" style="max-width:220px;display:block;margin:0 auto 0.5rem;">
+      <h1>San Joaquin Valley Town Hall</h1>
+      <!-- Mobile navigation toggle button implemented with checkbox pattern -->
+      <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-hidden="true">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+        <span class="hamburger" aria-hidden="true"></span>
+      </label>
+      <nav aria-label="Main navigation" class="nav-wrap">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <input type="checkbox" id="speakers-toggle" class="submenu-toggle" aria-hidden="true">
+            <label for="speakers-toggle" class="drop-toggle" role="button" aria-haspopup="true" aria-expanded="false">Speakers</label>
+            <ul class="dropdown-menu">
+              <li><a href="sampson.html">Sampson</a></li>
+              <li><a href="nina_ross.html">Nina Ross</a></li>
+            </ul>
+          </li>
+          <li><a href="tickets.html">Get Tickets</a></li>
+          <li><a href="#member">Become a Member</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="content" aria-labelledby="speaker-title">
+        <h2 id="speaker-title">Nina Ross</h2>
+        <img src="images/stick-man-stick-figure-clip-art-happy-stick-man-76012457a1a45773036342f02133d012.png" alt="Happy stick man" style="max-width: 250px; border-radius: 8px; box-shadow: var(--shadow); margin: 1rem 0;">
+        <h3>The Secret Lives of Historic Cats</h3>
+        <img src="C:\Users\ninar\Downloads\san_joaquin_site\town-hall-site\images\cat.jpg" alt="A picture of a Cat" style="max-width: 250px; border-radius: 8px; box-shadow: var(--shadow); margin: 1rem 0;">
+        <p>
+          Join historian Nina Ross as she uncovers the fascinating and often overlooked roles that cats have played throughout history. From the revered felines of ancient Egypt to the cherished companions of Renaissance artists and the unsung mousers of the Industrial Revolution, this talk explores how our feline friends have been silent witnesses and active participants in major historical events. Prepare for a delightful journey through time, filled with surprising tales of courage, companionship, and pure cat-titude.
+        </p>
+      </section>
+
+      <aside class="sidebar" aria-labelledby="notes">
+        <div>
+          <h3 id="notes">Lecture Notes</h3>
+          <p><strong>Event change for November:</strong> SJV Town Hall is pleased to announce the addition of award-winning author Andrew Ross Sorkin. The appearance of previously scheduled speaker, Greg Mortenson, has been postponed.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      © <span id="year"></span> San Joaquin Valley Town Hall — All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

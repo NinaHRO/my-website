@@ -1,0 +1,98 @@
+<!doctype html>
+<!-- 
+  San Joaquin Valley Town Hall - Home Page
+  This is the main landing page for the San Joaquin Valley Town Hall website.
+  The page features a responsive layout with:
+  - A header containing the logo and navigation
+  - A two-column layout for wider screens that collapses to single column on mobile
+  - Accessibility features including ARIA labels and roles
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>San Joaquin Valley Town Hall</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="..\san_joaquin_site\images\favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Main container with document role for accessibility -->
+  <div class="container" role="document">
+    <!-- Header section with logo and navigation -->
+    <header role="banner">
+      <img src="..\san_joaquin_site\images\logo.gif" alt="San Joaquin Valley Town Hall logo" style="max-width:220px;display:block;margin:0 auto 0.5rem;">
+      <h1>San Joaquin Valley Town Hall</h1>
+      <!-- Mobile navigation toggle button implemented with checkbox pattern -->
+      <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-hidden="true">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+        <span class="hamburger" aria-hidden="true"></span>
+      </label>
+      <nav aria-label="Main navigation" class="nav-wrap">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li class="dropdown">
+            <input type="checkbox" id="speakers-toggle" class="submenu-toggle" aria-hidden="true">
+            <label for="speakers-toggle" class="drop-toggle" role="button" aria-haspopup="true" aria-expanded="false">Speakers</label>
+            <ul class="dropdown-menu">
+              <li><a href="sampson.html">Sampson</a></li>
+              <li><a href="nina_ross.html">Nina Ross</a></li>
+            </ul>
+          </li>
+          <li><a href="tickets.html">Get Tickets</a></li>
+          <li><a href="#member">Become a Member</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="content" aria-labelledby="welcome">
+        <!-- main content moved from the aside -->
+        <div>
+          <h3 id="tickets">Get Tickets</h3>
+          <p>Tickets are available online and at the door. Early bird discounts for members.</p>
+          <p><a class="cta" href="#tickets">Buy Tickets</a></p>
+        </div>
+
+        <hr style="border:none;border-top:1px solid #eef2f7;margin:1rem 0">
+
+        <div>
+          <h3 id="member">Become a Member</h3>
+          <p>Support community programming and receive discounted tickets, priority seating, and newsletters.</p>
+          <p><a href="#member" class="cta" style="background:#0a8a5e">Join</a></p>
+        </div>
+
+        <hr style="border:none;border-top:1px solid #eef2f7;margin:1rem 0">
+
+        <div>
+          <h4>Contact</h4>
+          <p style="margin:.25rem 0">info@sjvtownhall.org</p>
+          <p style="margin:.25rem 0">(559) 555-1212</p>
+        </div>
+      </section>
+
+      <aside class="sidebar" aria-labelledby="notes">
+        <div>
+          <h3 id="notes">Lecture Notes</h3>
+          <p><strong>Event change for November:</strong> SJV Town Hall is pleased to announce the addition of award-winning author Andrew Ross Sorkin. The appearance of previously scheduled speaker, Greg Mortenson, has been postponed.</p>
+        </div>
+
+        <hr style="border:none;border-top:1px solid #eef2f7;margin:1rem 0">
+
+        <div>
+          <h3>Day, time, and location</h3>
+          <p>All one-hour lectures are on the second Wednesday of the month beginning at 10:30 a.m. at William Saroyan Theatre, 700 M Street, Fresno, CA.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      © <span id="year"></span> San Joaquin Valley Town Hall — All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
